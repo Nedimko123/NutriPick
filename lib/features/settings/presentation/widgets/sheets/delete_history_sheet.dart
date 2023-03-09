@@ -14,12 +14,12 @@ class DeleteHistorySheet extends ConsumerWidget {
   Widget build(BuildContext context, ref) {
     return WrapBottomSheet(children: [
       Text(
-        'Delete history data',
+        'Delete Diet Memory',
         textAlign: TextAlign.center,
         style: TextStyle(fontSize: 24.sp),
       ),
       Text(
-        'Are you sure you want to delete your transaction history data?',
+        'Are you sure you want to delete your diet memory?',
         textAlign: TextAlign.center,
         style: TextStyle(fontSize: 16.sp),
       ),

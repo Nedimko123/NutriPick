@@ -13,47 +13,20 @@ class BMICalculator extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, ref) {
-    final isAmericanMode = ref.watch(isAmericanModeProvider);
-    return isAmericanMode.maybeWhen(
-      data: (isAmericanMode) {
-        return SliverScaffold(
-            floatingActionButton: FloatingActionButton(
-                child: const Icon(Icons.add),
-                onPressed: () async => saveData(ref, isAmericanMode)),
-            slivers: [
-              const SliverAppBar(
-                centerTitle: true,
-                title: Text('BMI Calculator'),
-              ),
-              SliverToBoxAdapter(
-                child: Column(
-                  children: [
-                    SizedBox(
-                      height: 2.h,
-                    ),
-                    HeightSlider(
-                      isAmericanMode: isAmericanMode,
-                    ),
-                    SizedBox(
-                      height: 2.h,
-                    ),
-                    WeightSlider(
-                      isAmericanMode: isAmericanMode,
-                    ),
-                    SizedBox(
-                      height: 2.h,
-                    ),
-                    BMIResult(
-                      isAmericanMode: isAmericanMode,
-                    ),
-                  ],
-                ),
-              )
-            ]);
-      },
-      orElse: () => const Scaffold(
-        body: Center(child: CircularProgressIndicator()),
+    return SliverScaffold(slivers: [
+      const SliverAppBar(
+        centerTitle: true,
+        title: Text('NutriPick'),
       ),
-    );
+      SliverToBoxAdapter(
+        child: Column(
+          children: [
+            SizedBox(
+              height: 2.h,
+            ),
+          ],
+        ),
+      )
+    ]);
   }
 }
