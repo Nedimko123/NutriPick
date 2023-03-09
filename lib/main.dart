@@ -18,7 +18,7 @@ class MyApp extends ConsumerWidget {
     return ResponsiveSizer(
       builder: (context, orientation, screenType) {
         return MaterialApp(
-          title: 'BMI Calculator - Track Your Body Mass Index',
+          title: 'NutriPick',
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
               useMaterial3: true, colorSchemeSeed: Colors.greenAccent),
