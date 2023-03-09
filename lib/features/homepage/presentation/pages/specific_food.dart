@@ -167,6 +167,7 @@ class SpecificFoodItem extends ConsumerWidget {
         ),
         //Nutrients
         returnNutrients(
+            ref: ref,
             selectedIndex: selectedIndex.state,
             food: food,
             selectedWeight: selectedWeight.state,

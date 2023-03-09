@@ -126,6 +126,7 @@ class DietMemory extends ConsumerWidget {
                   ),
                 ),
                 returnDietNutrients(
+                    ref: ref,
                     selectedIndex: selectedIndex.state,
                     food: shownListFoodNutrients,
                     selectedWeight: Weight.g,
