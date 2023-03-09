@@ -1,7 +1,9 @@
-//ui element of it, widget
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
+
+//ui element of it, widget
 
 class WrapBottomSheet extends StatelessWidget {
   final List<Widget> children;
@@ -15,13 +17,24 @@ class WrapBottomSheet extends StatelessWidget {
     return Wrap(
       alignment: WrapAlignment.center,
       children: [
-        Padding(
-          padding: EdgeInsets.all(15.sp),
-          child: Column(
-            children: children,
-          ),
+        Column(
+          children: children,
         ),
       ],
     );
   }
+}
+
+//function to call it
+
+wrapBottomSheet(BuildContext context, List<Widget> children) {
+  return showModalBottomSheet(
+      isScrollControlled: true,
+      elevation: 10,
+      shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(top: Radius.circular(20.sp))),
+      context: context,
+      builder: (context) {
+        return WrapBottomSheet(children: children);
+      });
 }

@@ -5,7 +5,7 @@ import 'package:foods/features/meal/presentation/pages/meal.dart';
 import 'package:foods/features/settings/presentation/pages/settings.dart';
 
 const List<Widget> screens = [
-  BMICalculator(),
+  NutriPick(),
   BMIHistory(),
   Meal(),
   Settings(),
