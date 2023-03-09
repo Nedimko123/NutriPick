@@ -1,6 +1,6 @@
 # Privacy Policy for NutriPick
 
-At NutriPick, we are committed to protecting the privacy and security of our users' personal information. This privacy policy explains how we collect, use, and disclose information about you when you use our mobile application ("App").
+At NutriPick, we are committed to protecting the privacy and security of our users' personal information. This privacy policy explains how we collect, use, and disclose information about you when you use our mobile application ("NutriPick").
 
 # Information We Collect
 
