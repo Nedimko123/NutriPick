@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:foods/features/common/presentation/layout_design/sliver_scaffold.dart';
 import 'package:foods/features/homepage/domain/functions/add_to_meal.dart';
+import 'package:foods/features/homepage/domain/functions/save_to_db.dart';
 import 'package:foods/features/homepage/presentation/widgets/form1.dart';
 import 'package:foods/features/homepage/presentation/widgets/return_nutrients.dart';
 import 'package:foods/features/homepage/presentation/widgets/weightRadioButton.dart';
@@ -99,9 +100,13 @@ class SpecificFoodItem extends ConsumerWidget {
               SizedBox(
                 height: 1.h,
               ),
-              Text(
-                '+ Add to diet',
-                style: TextStyle(fontSize: 16.sp, fontStyle: FontStyle.italic),
+              InkWell(
+                onTap: () async => await saveData(ref, food),
+                child: Text(
+                  '+ Add to diet',
+                  style:
+                      TextStyle(fontSize: 16.sp, fontStyle: FontStyle.italic),
+                ),
               ),
               SizedBox(
                 height: 1.h,
@@ -145,9 +150,9 @@ class SpecificFoodItem extends ConsumerWidget {
                               fontWeight: selectedIndex.state == index
                                   ? FontWeight.bold
                                   : FontWeight.w300,
-                              color: Colors.black.withOpacity(
-                                selectedIndex.state == index ? 1 : 0.5,
-                              ),
+                              color: Theme.of(context).focusColor.withOpacity(
+                                    selectedIndex.state == index ? 1 : 0.5,
+                                  ),
                               decoration: selectedIndex.state == index
                                   ? TextDecoration.underline
                                   : null),

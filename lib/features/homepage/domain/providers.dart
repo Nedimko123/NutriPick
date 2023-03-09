@@ -25,7 +25,8 @@ final foodsProvider = StateProvider<List<Food>>((ref) {
 });
 
 final searchWeightControllerProvider =
-    Provider<TextEditingController>((ref) => TextEditingController());
+    Provider.autoDispose<TextEditingController>(
+        (ref) => TextEditingController());
 
 final searchWeightProvider = StateProvider.autoDispose<double>((ref) => 100);
 

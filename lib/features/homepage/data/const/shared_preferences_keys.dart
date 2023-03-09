@@ -1,1 +1,1 @@
-const String sharedPreferencesBMIHistoryKey = 'sharedPreferencesTransactionKey';
+const String sharedPreferencesDietMemoryKey = 'sharedPreferencesTransactionKey';
