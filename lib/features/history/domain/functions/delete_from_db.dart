@@ -20,7 +20,6 @@ Future<void> deleteTransaction(int index, WidgetRef ref) async {
   await sharedPreferences
       .setString(sharedPreferencesDietMemoryKey, jsonEncode(dietList))
       .whenComplete(() {
-    successToast('Deleted BMI');
     return ref.refresh(transactionHistoryProvider);
   });
 }

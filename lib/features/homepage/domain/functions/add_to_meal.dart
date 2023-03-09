@@ -11,7 +11,6 @@ void addToMeal(WidgetRef ref, Food food) {
 
   meals.update((state) {
     state.add(food);
-    print(state.last.energy);
     return state;
   });
   successToast('Added to Meal');

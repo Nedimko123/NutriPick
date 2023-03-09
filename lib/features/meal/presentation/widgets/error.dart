@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-class EmptyMeal extends StatelessWidget {
+class EmptyMeal extends ConsumerWidget {
   const EmptyMeal({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, ref) {
     return SliverToBoxAdapter(
       child: Padding(
         padding: EdgeInsets.all(15.sp),
