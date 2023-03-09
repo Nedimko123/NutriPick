@@ -17,9 +17,8 @@ class BMIHistory extends ConsumerWidget {
     return SliverScaffold(slivers: [
       const SliverAppBar(
         centerTitle: true,
-        title: Text('BMI History'),
+        title: Text('Diet Memory'),
       ),
-      const SwitchGraph(),
       bmiModels.when(
           data: (bmiModels) {
             return BMIList(bmiModels: bmiModels.reversed.toList());

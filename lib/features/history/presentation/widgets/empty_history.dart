@@ -16,7 +16,7 @@ class EmptyBMIHistory extends StatelessWidget {
               height: 50.sp,
             ),
             Text(
-              'No BMI data yet! Add it by pressing the floating action button at the home screen.',
+              'Nothing saved in the Diet Memory yet!',
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 16.sp),
             )
